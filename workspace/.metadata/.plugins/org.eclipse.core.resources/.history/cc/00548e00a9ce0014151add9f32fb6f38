@@ -1,0 +1,109 @@
+import java.awt.Color;
+import java.awt.Graphics;
+
+
+/**
+ * TODO Write a one-sentence summary of your class here. TODO Follow it with
+ * additional details about its purpose, what abstraction it represents, and how
+ * to use it.
+ * 
+ * @author Bryan Wu
+ * @version 3/19/15
+ * @author Period - 7
+ * @author Assignment - Ch74_FractalTree
+ * @author Sources - none
+ */
+public class Tree
+{
+    double dFractionLength;
+
+    int nSmallestBranch;
+
+    double dBranchAngle;
+
+    int nStartX, nStartY, nEndX, nEndY;
+
+
+    /**
+     * TODO Write your constructor description here.
+     */
+    public Tree()
+    {
+        dFractionLength = .8;
+        nSmallestBranch = 10;
+        dBranchAngle = .2;
+        nStartX = 400;
+        nStartY = 700;
+        nEndX = 400;
+        nEndY = 600;
+    }
+
+
+    /**
+     * TODO Write your constructor description here.
+     * 
+     * @param startX
+     * @param startY
+     * @param endX
+     * @param endY
+     */
+    public Tree( int startX, int startY, int endX, int endY )
+    {
+        dFractionLength = 0.8;
+        nSmallestBranch = 10;
+        dBranchAngle = 0.2;
+        nStartX = startX;
+        nStartY = startY;
+        nEndX = endX;
+        nEndY = endY;
+    }
+
+
+    /**
+     * TODO Write your method description here.
+     * 
+     * @param g
+     */
+    public void draw( Graphics g )
+    {
+        g.setColor( Color.green );
+        g.drawLine( nStartX, nStartY, nEndX, nEndY );
+
+        Branch( 100, nEndX, nEndY, 3 * Math.PI / 2, g );
+    }
+
+
+    /**
+     * TODO Write your method description here.
+     * 
+     * @param dLength
+     * @param nStartX
+     * @param nStartY
+     * @param dAngle
+     * @param g
+     */
+    public void Branch(
+        double dLength,
+        int nStartX,
+        int nStartY,
+        double dAngle,
+        Graphics g )
+    {
+        if ( dLength < nSmallestBranch )
+        {
+            return;
+        }
+        double dAngle1 = dAngle + dBranchAngle;
+        double dAngle2 = dAngle - dBranchAngle;
+        int nEndX1 = (int)( dLength * Math.cos( dAngle1 ) + nStartX );
+        int nEndY1 = (int)( dLength * Math.sin( dAngle1 ) + nStartY );
+        int nEndX2 = (int)( dLength * Math.cos( dAngle2 ) + nStartX );
+        int nEndY2 = (int)( dLength * Math.sin( dAngle2 ) + nStartY );
+        g.drawLine( nStartX, nStartY, nEndX1, nEndY1 );
+        g.drawLine( nStartX, nStartY, nEndX2, nEndY2 );
+
+        Branch( dLength * dFractionLength, nEndX1, nEndY1, dAngle1, g );
+        Branch( dLength * dFractionLength, nEndX2, nEndY2, dAngle2, g );
+
+    }
+}

@@ -1,0 +1,228 @@
+import java.util.*;
+
+
+/**
+ * Chapter 18 - Sentinel Controlled Loops Exercises 1-5.
+ * 
+ * @author Bryan Wu
+ * @version 10/31/14
+ * 
+ * @author Period - 7
+ * @author Assignment - Ch18Ex1to5
+ * 
+ * @author Sources - none
+ */
+public class Ch18Ex1to5
+{
+    /**
+     * scan
+     */
+    Scanner scan;
+
+
+    /**
+     * Constructs a Scanner for input from the console.
+     */
+    public Ch18Ex1to5()
+    {
+        scan = new Scanner( System.in );
+
+    }
+
+
+    /**
+     * Constructs a Scanner to evaluate passed input (used for testing).
+     * 
+     * @param str
+     *            input for the various methods
+     */
+    public Ch18Ex1to5( String str )
+    {
+        scan = new Scanner( str );
+    }
+
+
+    /**
+     * miles per gallon
+     */
+    public void milesPerGallon()
+    {
+
+        System.out.println( "Miles Per Gallon Program" );
+        System.out.println( "Initial miles: " );
+        int initialMiles = scan.nextInt();
+        if ( initialMiles < 0 )
+        {
+            System.out.println( "bye scrub" );
+            return;
+        }
+        System.out.println( "Final miles: " );
+        int finalMiles = scan.nextInt();
+        System.out.println( "Gallons: " );
+        int gallons = scan.nextInt();
+        double mpg = ( finalMiles - initialMiles ) / gallons;
+        while ( initialMiles >= 0 )
+        {
+            System.out.println( "Miles per Gallon: " + mpg );
+            System.out.println( "" );
+            System.out.println( "Miles Per Gallon Program" );
+            System.out.println( "Initial miles: " );
+            initialMiles = scan.nextInt();
+            System.out.println( "Final miles: " );
+            finalMiles = scan.nextInt();
+            System.out.println( "Gallons: " );
+            gallons = scan.nextInt();
+            mpg = ( finalMiles - initialMiles ) / gallons;
+        }
+    }
+
+
+    /**
+     * in range adder
+     */
+    public void inRangeAdder()
+    {
+        System.out.println( "In-range Adder" );
+        System.out.println( "" );
+        System.out.println( "Low end of range: " );
+        int minRange = scan.nextInt();
+        System.out.println( "High end of range: " );
+        int maxRange = scan.nextInt();
+        System.out.println( "Enter data: " );
+        int value = scan.nextInt();
+        int inRangeSum = 0;
+        int outRangeSum = 0;
+        while ( value != 0 )
+        {
+            if ( value >= minRange && value <= maxRange )
+            {
+                inRangeSum = inRangeSum + value;
+            }
+            if ( value < minRange || value > maxRange )
+            {
+                outRangeSum = outRangeSum + value;
+            }
+            System.out.println( "Enter data: " );
+            value = scan.nextInt();
+        }
+        System.out.println( "Sum of in range values: " + inRangeSum );
+        System.out.println( "Sum of out of range values: " + outRangeSum );
+        // In-range Adder
+        //
+        // Low end of range: 20
+        // High end of range: 50
+        // Enter data:
+    }
+
+
+    /**
+     * shipping cost calc
+     */
+    public void shippingCostCalc()
+    {
+        System.out.println( "Weight of Order: " );
+        int weight = scan.nextInt();
+        double shipping = 0;
+        while ( weight > 0 )
+        {
+            if ( weight <= 10 )
+            {
+                shipping = shipping + 3.00;
+            }
+            if ( weight > 10 )
+            {
+                shipping = weight*0.25+3.00;
+            }
+            System.out.println( "Weight of Order: " );
+            weight = scan.nextInt();
+        }
+        System.out.println( "Shipping Cost: $" + shipping );
+
+    }
+
+
+    /**
+     * TODO Description
+     */
+    public void areaOfRectangle()
+    {
+        // TODO Your code goes here
+    }
+
+
+    /**
+     * TODO Description
+     */
+    public void loginSimulator()
+    {
+        // TODO Your code goes here
+    }
+
+
+    /**
+     * Testing method: instantiates a Ch18Ex1to5 object and then invokes each
+     * method.
+     * 
+     * @param args
+     *            command line parameters (not used)
+     */
+    public static void main( String[] args )
+    {
+        Scanner kbd = new Scanner( System.in );
+        boolean done = false;
+
+        Ch18Ex1to5 exercise = new Ch18Ex1to5();
+
+        do
+        {
+            System.out.println();
+            System.out.println();
+            System.out.println( "Make a selection" );
+            System.out.println();
+            System.out.println( "   (1) Miles per Gallon" );
+            System.out.println( "   (2) In-range Adder" );
+            System.out.println( "   (3) Shipping Cost Calculator" );
+            System.out.println( "   (4) Area of Rectangles" );
+            System.out.println( "   (5) Login simulator" );
+            System.out.println( "   (Q) Quit" );
+            System.out.println();
+            System.out.print( "Enter a choice:  " );
+            String response = kbd.nextLine();
+
+            if ( response.length() > 0 )
+            {
+                System.out.println();
+
+                switch ( response.charAt( 0 ) )
+                {
+                    case '1':
+                        exercise.milesPerGallon();
+                        break;
+                    case '2':
+                        exercise.inRangeAdder();
+                        break;
+                    case '3':
+                        exercise.shippingCostCalc();
+                        break;
+                    case '4':
+                        exercise.areaOfRectangle();
+                        break;
+                    case '5':
+                        exercise.loginSimulator();
+                        break;
+                    default:
+                        if ( response.toLowerCase().charAt( 0 ) == 'q' )
+                        {
+                            done = true;
+                        }
+                        else
+                        {
+                            System.out.print( "Invalid Choice" );
+                        }
+                        break;
+                }
+            }
+        } while ( !done );
+        System.out.println( "Goodbye!" );
+    }
+}

@@ -1,0 +1,82 @@
+import java.awt.Color;
+import java.awt.Graphics;
+
+/**
+   TODO Write a one-sentence summary of your class here.
+   TODO Follow it with additional details about its purpose, what abstraction
+   it represents, and how to use it.
+
+   @author  TODO Your Name
+   @version TODO Date
+
+   @author  Period - TODO Your Period
+   @author  Assignment - Ch74_FractalTree
+
+   @author  Sources - TODO list collaborators
+ */
+public class Tree
+{
+    double dFractionLength;
+    int nSmallestBranch;
+    double dBranchAngle;
+    int nStartX, nStartY, nEndX, nEndY;
+
+    /**
+        TODO Write your constructor description here.
+     */
+    public Tree()
+    {
+        dFractionLength = .8;
+        nSmallestBranch = 10;
+        dBranchAngle = .2;
+        nStartX = 400;
+        nStartY = 700;
+        nEndX = 400;
+        nEndY = 600;
+    }
+
+    /**
+        TODO Write your constructor description here.
+
+        @param startX
+        @param startY
+        @param endX
+        @param endY
+     */
+    public Tree( int startX, int startY, int endX, int endY )
+    {
+        dFractionLength = 0.8;
+        nSmallestBranch = 10;
+        dBranchAngle = 0.2;
+        nStartX = startX;
+        nStartY = startY;
+        nEndX = endX;
+        nEndY = endY;
+    }
+
+    /**
+        TODO Write your method description here.
+        @param g
+     */
+    public void draw( Graphics g )
+    {
+        g.setColor( Color.green );
+        g.drawLine( nStartX, nStartY, nEndX, nEndY );
+
+        // TODO your code here
+    }
+
+    /**
+        TODO Write your method description here.
+        @param dLength
+        @param nStartX
+        @param nStartY
+        @param dAngle
+        @param g
+     */
+    public void Branch( double dLength, int nStartX, int nStartY,
+        double dAngle, Graphics g )
+    {
+        // TODO your code here
+    }
+}

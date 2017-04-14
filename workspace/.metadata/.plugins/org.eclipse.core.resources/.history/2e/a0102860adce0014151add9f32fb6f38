@@ -1,0 +1,73 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.util.Random;
+
+/**
+   Makes a blizzard of snowflakes.
+    
+    @author  Bryan Wu
+    @version TODO date
+    
+    @author  Period: TODO Your Period
+    @author  Assignment: Ch74 Exercise 2 - Blizzard
+    
+    @author  Sources: TODO list collaborators
+*/
+class BlizzardPanel extends JPanel implements MouseListener
+{
+    private Graphics graph;
+    private Random rand;
+
+    public BlizzardPanel()
+    {
+        rand = new Random();
+        setBackground( Color.white );
+        addMouseListener( this );
+    }
+
+    private void drawStar( int x, int y, int size )
+    {
+        // TODO Complete recursive method
+    }
+
+    public void paintComponent( Graphics gr )
+    {
+        super.paintComponent( gr );
+        graph = gr;
+
+        int width = getSize().width;
+        int height = getSize().height;
+        // setBackground( Color.white );
+        gr.setColor( Color.blue );
+        gr.drawRect( 0, 0, width - 1, height - 1 );
+
+        // TODO complete method
+        // draw a few dozen randomly positioned snowflakes
+        // of a few random sizes and a few random colors
+    }
+
+    public void mousePressed( MouseEvent evt )
+    {
+        repaint();
+    }
+
+    // Empty methods, required by the interface.
+    public void mouseReleased( MouseEvent evt ){ }
+    public void mouseClicked( MouseEvent evt ){ }
+    public void mouseEntered( MouseEvent evt ){ }
+    public void mouseExited( MouseEvent evt ){ }
+}
+
+public class Blizzard extends JApplet
+{
+    // This simple init() method just creates a drawing surface
+    // belonging to the nested class Display and uses it for
+    // the content pane of the JApplet. (This is one case where
+    // it is rather silly to use a JApplet rather than a plain
+    // old Applet!)
+    public void init()
+    {
+        setContentPane( new BlizzardPanel() );
+    }
+}

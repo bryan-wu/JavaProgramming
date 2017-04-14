@@ -1,0 +1,16 @@
+import kareltherobot.*;
+
+// TODO: add comments
+
+public class CarpetBot extends SmartBot
+{
+    // TODO: complete constructor
+
+    public void carpetRooms()
+    {
+        // TODO: complete method
+    }
+
+    // TODO: complete methods
+
+}             

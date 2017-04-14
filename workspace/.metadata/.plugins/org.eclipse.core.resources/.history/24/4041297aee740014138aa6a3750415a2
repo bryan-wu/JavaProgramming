@@ -1,0 +1,72 @@
+import javax.swing.*;
+
+import java.awt.*;
+import java.awt.geom.*;
+
+/**
+   Draw Circle column that will adjust to resizing.
+
+   @author  Bryan Wu
+   @version 11/25/14
+
+   @author  Period - 7
+   @author  Assignment - Ch37_AppletEx
+
+   @author  Sources - none
+ */
+public class CircleColumn extends JApplet
+{
+    /**
+     * The applet's init() method creates the display panel and adds them
+     * to the applet.
+     */
+    public void init()
+    {
+        Display displayPanel = new Display();
+
+        JPanel content = new JPanel();
+        content.setLayout( new BorderLayout() );
+        content.add( displayPanel, BorderLayout.CENTER );
+        setContentPane( content );
+    }
+
+    // Defines the display panel.
+    public class Display extends JPanel
+    {
+        public void paintComponent( Graphics gr )
+        {
+            super.paintComponent( gr );
+
+            Container applet = getContentPane();
+            int width = applet.getWidth();
+            int height = applet.getHeight();
+            setBackground(Color.WHITE);
+
+            gr.setColor( Color.BLUE );
+            gr.drawRect( 0, 0, width - 1, height - 1 );
+            String str = "";
+
+            Font curFont = applet.getFont();
+            FontMetrics curFontMetrics = applet.getFontMetrics( curFont );
+            Rectangle2D r2d = curFontMetrics.getStringBounds( str, gr );
+
+            int strWidth = (int)( (Rectangle2D.Float)r2d ).width;
+            int strHeight = (int)( (Rectangle2D.Float)r2d ).height;
+            gr.setColor( Color.BLACK );
+            gr.drawString( str, ( width - strWidth ) / 2, ( height + strHeight ) / 2 );
+
+            gr.setColor( Color.red );
+            int diameter = 20;
+            int Y = height/2 - diameter/2;      // the top edge of the squares
+            int shift = (width/10-diameter)/2;  // shift circles right
+
+            int count =  0 ;
+            while (  count < 10  )
+            {
+              int X = count*width/10+shift;          // the left edge of each square
+              gr.drawOval( X, Y, diameter, diameter );
+              count = count + 1; 
+            }
+        }
+    }
+}

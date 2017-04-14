@@ -1,0 +1,32 @@
+import kareltherobot.*;
+
+// TODO: add comments
+
+public class SmartBot extends Robot
+{
+    public SmartBot( int st, int av, Direction dir, int numBeepers )
+    {
+        super( st, av, dir, numBeepers );
+    }
+
+    /**
+     * Check if the position to the right of the current position is clear.
+     * 
+     * @return false if there is a wall to the right of the current position,
+     *         true otherwise
+     */
+    public boolean rightIsClear()
+    {
+        // TODO: complete method
+
+        return false;
+    }
+
+    /**
+     * Change this robot's position 90 degrees to the right.
+     */
+    public void turnRight()
+    {
+        // TODO: complete method
+    }
+}

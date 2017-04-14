@@ -1,0 +1,329 @@
+import java.util.*;
+
+
+/**
+ * Chapter 20 - Random Class Exercises 3, 5, 7 & 8.
+ * 
+ * @author Bryan Wu
+ * @version 11/10/14
+ * 
+ * @author Period - 7
+ * @author Assignment - Ch20Exercises
+ * 
+ * @author Sources - none
+ */
+public class Ch20Exercises
+{
+    /**
+     * scan
+     */
+    Scanner scan;
+
+    Random rand = new Random();
+
+
+    /**
+     * Constructs a Scanner for input from the console.
+     */
+    public Ch20Exercises()
+    {
+        scan = new Scanner( System.in );
+    }
+
+
+    /**
+     * Constructs a Scanner to evaluate passed input (used for testing).
+     * 
+     * @param str
+     *            input for the various methods
+     * @param seed
+     *            seed to use for random number generator
+     */
+    public Ch20Exercises( String str, long seed )
+    {
+        scan = new Scanner( str );
+        rand.setSeed( seed );
+    }
+
+
+    /**
+     * guessing game
+     */
+    public void furtherImprovedGuessingGame()
+    {
+        int tries = 1;
+        int round = 1;
+        int wins = 0;
+        int secretNumber = rand.nextInt( 6 ) + 1;
+
+        System.out.println( "Round " + round + ": " );
+        System.out.println( "" );
+        // remove below
+        System.out.println( secretNumber );
+        // remove above
+        System.out.println( "I am thinking of a number from 1 to 10." );
+        System.out.println( "You must guess what it is in three tries" );
+
+        System.out.println( "Enter a guess: " );
+        int guess = scan.nextInt();
+        while ( tries < 3 && guess != secretNumber )
+        {
+            tries++;
+            if ( Math.abs( secretNumber - guess ) >= 3 )
+            {
+                System.out.println( "cold" );
+            }
+            else if ( Math.abs( secretNumber - guess ) == 2 )
+            {
+                System.out.println( "warm" );
+            }
+            else if ( Math.abs( secretNumber - guess ) == 1 )
+            {
+                System.out.println( "hot" );
+            }
+
+            System.out.println( "" );
+            System.out.println( "I am thinking of a number from 1 to 10." );
+            System.out.println( "You must guess what it is in three tries" );
+            System.out.println( "Enter a guess: " );
+            guess = scan.nextInt();
+        }
+
+        if ( guess == secretNumber )
+        {
+            wins++;
+            System.out.println( "RIGHT!" );
+            System.out.println( "You have won " + wins + " out of " + round
+                + " rounds." );
+        }
+
+        else
+        {
+            System.out.println( "wrong" );
+            System.out.println( "The correct number was " + secretNumber + "." );
+            System.out.println( "You have won " + wins + " out of " + round
+                + " rounds." );
+        }
+
+        while ( round < 10 )
+        {
+            tries = 0;
+            round++;
+            secretNumber = rand.nextInt( 6 ) + 1;
+            // remove below
+            System.out.println( secretNumber );
+            // remove above
+            System.out.println( "Round " + round + ": " );
+            System.out.println( "" );
+            while ( tries < 3 && guess != secretNumber )
+            {
+                tries++;
+
+                System.out.println( "" );
+                System.out.println( "I am thinking of a number from 1 to 10." );
+                System.out.println( "You must guess what it is in three tries" );
+                System.out.println( "Enter a guess: " );
+                guess = scan.nextInt();
+
+                if ( Math.abs( secretNumber - guess ) >= 3 )
+                {
+                    System.out.println( "cold" );
+                }
+                else if ( Math.abs( secretNumber - guess ) == 2 )
+                {
+                    System.out.println( "warm" );
+                }
+                else if ( Math.abs( secretNumber - guess ) == 1 )
+                {
+                    System.out.println( "hot" );
+                }
+            }
+
+            if ( guess == secretNumber )
+            {
+                wins++;
+                System.out.println( "RIGHT!" );
+                System.out.println( "You have won " + wins + " out of " + round
+                    + " rounds." );
+            }
+
+            else
+            {
+                System.out.println( "wrong" );
+                System.out.println( "The correct number was " + secretNumber
+                    + "." );
+                System.out.println( "You have won " + wins + " out of " + round
+                    + " rounds." );
+            }
+        }
+        String rating = null;
+
+        if ( wins <= 7 )
+        {
+            rating = "amateurs";
+        }
+
+        else if ( wins == 8 )
+        {
+            rating = "advanced";
+        }
+        else if ( wins == 9 )
+        {
+            rating = "professionals";
+        }
+        else if ( wins == 10 )
+        {
+            rating = "hackers";
+        }
+        System.out.println( "Your rating: " + rating );
+    }
+
+
+    /**
+     * crack password
+     */
+    public void passwordCracker()
+    {
+        System.out.println( "Enter a secret password-->" );
+        String password = scan.nextLine();
+        int tries = 0;
+        int characters = password.length();
+
+        String choices = "abcdefghijklmnopqrstuvwxyz";
+        choices = choices + choices.toUpperCase();
+        choices = choices + "1234567890";
+
+        String guess = "";
+        while ( !( guess.equals( password ) ) )
+        {
+            int j = 0;
+            while ( j < characters )
+            {
+                guess = guess
+                    + choices.charAt( rand.nextInt( choices.length() ) );
+                j = j + 1;
+            }
+            tries++;
+        }
+
+        System.out.println( "Here is your password: " + guess );
+        System.out.println( "It took " + tries + " tries to guess it" );
+
+    }
+
+
+    /**
+     * randomwalk2d
+     */
+    public void randomWalk2D()
+    {
+
+    }
+
+
+    /**
+     * sqr root game
+     */
+    public void squareRootGame()
+    {
+        System.out.println( "How many rounds? " );
+        int totalRounds = scan.nextInt();
+        if ( totalRounds == 0 )
+        {
+            return;
+        }
+        System.out.println( "First Player, sign in--> " );
+        String player1 = scan.nextLine();
+        System.out.println( "Second Player, sign in--> " );
+        String player2 = scan.nextLine();
+        System.out.println( "" );
+
+        double sqr = Math.sqrt(rand.nextDouble() * 100);
+        int rounds = 0;
+
+        while ( rounds < totalRounds )
+        {
+
+            System.out.println( " What is the square root of " + sqr + "\t?" );
+            System.out.println( player1 + ", your guess: " );
+            rounds++;
+        }
+
+        // How many rounds? 4
+        // First Player, sign in--> Dweezle
+        // Secnd Player, sign in--> Moon Unit
+        //
+        // What is the square root of 83.29097831183603 ?
+        // Dweezle, your guess: 9.1
+        // Moon Unit, your guess: 9.2
+        // The correct square root: 9.126389116832353
+        // Dweezle is 0.026389116832353565 away
+        // Moon Unit is 0.07361088316764608 away
+        // Dweezle wins!
+    }
+
+
+    /**
+     * Testing method: instantiates a Lesson15Exercises object and then invokes
+     * each method.
+     * 
+     * @param args
+     *            command line parameters (not used)
+     */
+    public static void main( String[] args )
+    {
+        Scanner kbd = new Scanner( System.in );
+        boolean done = false;
+
+        Ch20Exercises exercise = new Ch20Exercises();
+
+        do
+        {
+            System.out.println();
+            System.out.println();
+            System.out.println( "Make a selection" );
+            System.out.println();
+            System.out.println( "   (3) Further Improved Guessing Game" );
+            System.out.println( "   (5) Password Cracker" );
+            System.out.println( "   (7) 2D Random Walk" );
+            System.out.println( "   (8) Suqare Root Game" );
+            System.out.println( "   (Q) Quit" );
+            System.out.println();
+            System.out.print( "Enter a choice:  " );
+            String response = kbd.nextLine();
+
+            if ( response.length() > 0 )
+            {
+                System.out.println();
+
+                switch ( response.charAt( 0 ) )
+                {
+                    case '3':
+                        exercise.furtherImprovedGuessingGame();
+                        break;
+                    case '5':
+                        exercise.passwordCracker();
+                        break;
+                    case '7':
+                        exercise.randomWalk2D();
+                        break;
+                    case '8':
+                        exercise.squareRootGame();
+                        break;
+                    default:
+                        if ( response.toLowerCase().charAt( 0 ) == 'q' )
+                        {
+                            done = true;
+                        }
+                        else
+                        {
+                            System.out.print( "Invalid Choice" );
+                        }
+                        break;
+                }
+            }
+        } while ( !done );
+
+        System.out.println( "Goodbye!" );
+    }
+}

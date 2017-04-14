@@ -1,0 +1,10 @@
+import kareltherobot.*;
+
+// TODO: add comments
+
+public class MazeWalker extends SmartBot
+{
+    // TODO: complete constructor
+
+    // TODO: complete methods
+}             

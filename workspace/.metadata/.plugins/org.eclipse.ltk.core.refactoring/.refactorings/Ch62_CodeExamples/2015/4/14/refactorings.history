@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;Ch62_CodeExamples&apos;&#x0D;&#x0A;- Original project: &apos;Ch62_CodeExamples&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Ex1_TempConvert.java&#x0D;&#x0A;     Ex2_TwoWayConvert.java&#x0D;&#x0A;     Ex3_PercentFat.java" description="Delete elements" element1="/&lt;{Ex2_TwoWayConvert.java" element2="/&lt;{Ex1_TempConvert.java" element3="/&lt;{Ex3_PercentFat.java" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1428009832874" subPackages="false" version="1.0"/>
+</session>

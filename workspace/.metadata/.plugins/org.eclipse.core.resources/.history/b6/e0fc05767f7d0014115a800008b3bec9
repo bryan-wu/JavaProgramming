@@ -1,0 +1,75 @@
+import javax.swing.*;
+
+import java.awt.*;
+
+
+/**
+ * Bouncing Balls
+ * 
+ * @author Bryan Wu
+ * @version 12/5/14
+ * 
+ * @author Period - 7
+ * @author Assignment - Ch38BEx1_MarchingLines1
+ * 
+ * @author Sources - none
+ */
+public class Ch38BEx3_BouncingBalls extends AnimationBase
+{
+    public BouncingBall redBall;
+
+    public BouncingBall blueBall;
+
+
+    /**
+     * This routine is called by the system when the applet is first created.
+     */
+    public void init()
+    {
+        int width = getWidth(); // Width of the applet, in pixels.
+        int height = getHeight();
+        int inset = getFrameNumber() % 10;
+        int red, green, blue;
+
+        Color randomColor;
+        if ( inset < 10 )
+        {
+            red = (int)( Math.random() * 256 );
+            green = (int)( Math.random() * 256 );
+            blue = (int)( Math.random() * 256 );
+            inset++;
+        }
+        randomColor = new Color( red, green, blue );
+        redBall = new BouncingBall( width / 2, height / 2, 10, randomColor );
+        blueBall = new BouncingBall( width / 2, height / 2, 15, randomColor );
+
+        setMillisecondsPerFrame( 20 );
+    }
+
+
+    /**
+     * This routine is called by the animation framework every time a new frame
+     * needs to be drawn.
+     * 
+     * For this animation, balls will bounce off the end of the windows.
+     */
+    public void drawFrame( Graphics g )
+    {
+        super.drawFrame( g ); // remove this line
+
+        int width; // Width of the applet, in pixels.
+        int height; // Height of the applet, in pixels.
+
+        width = getWidth(); // Find out the size of the drawing area.
+        height = getHeight();
+
+        // Fill the applet with a black background.
+        g.setColor( Color.black );
+        g.fillRect( 0, 0, width, height );
+
+        redBall.doFrame( g, width, height );
+
+        blueBall.doFrame( g, width, height );
+
+    }
+}

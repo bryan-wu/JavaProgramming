@@ -1,0 +1,143 @@
+/*
+ * I LOVE JAVA
+ */
+
+import java.awt.*;
+import java.applet.*;
+import java.awt.image.*;
+import java.util.*;
+
+
+public class SnowApplet extends Applet implements Runnable
+{
+    int W, H;
+
+    BufferedImage bim;
+
+    Graphics bimg;
+
+    Color lineColor, white;
+
+    int whiteInt, lineColorInt;
+
+    Snow[] snowFlakes;
+
+    int snowCount = 1000;
+
+    Random rand;
+
+    Thread th;
+
+
+    public void init()
+    {
+        W = this.getWidth();
+        H = this.getHeight();
+        bim = new BufferedImage( W, H, BufferedImage.TYPE_INT_RGB );
+        lineColor = new Color( 255, 0, 0 );
+        white = new Color( 255, 255, 255 );
+        whiteInt = white.getRGB();
+        lineColorInt = lineColor.getRGB();
+        rand = new Random();
+        bimg = bim.getGraphics();
+        this.setBackground( new Color( 255, 255, 255 ) );
+        snowFlakes = new Snow[snowCount];
+        for ( int i = 0; i < snowFlakes.length; i++ )
+            snowFlakes[i] = new Snow( rand.nextInt() % W, -(int)( i
+                * rand.nextInt() % 100 ) );
+
+    }
+
+
+    public void paint( Graphics g )
+    {
+        g.drawImage( bim, 0, 0, this );
+    }
+
+
+    public void update( Graphics g )
+    {
+        paint( g );
+    }
+
+
+    public void run()
+    {
+        int arttir = 1;
+        int x, y;
+        while ( true )
+        {
+            try
+            {
+                arttir = 1;
+                bimg.clearRect( 0, 0, W, H );
+                bimg.setColor( lineColor );
+
+                for ( int j = 0; j <= 5; j++ )
+                {
+                    bimg.drawLine( 160, 150 + j, 250, 120 + j );
+                    bimg.drawLine( 260, 150 + j, 350, 200 + j );
+                    bimg.drawLine( 50, 200 + j, 170, 250 + j );
+                    bimg.drawLine( 280, 300 + j, 450, 200 + j );
+                }
+
+                bimg.setColor( white );
+                for ( int i = 0; i < snowFlakes.length; i++ )
+                {
+                    x = snowFlakes[i].x;
+                    y = snowFlakes[i].y;
+                    if ( x > 0 && x < W && y > 0 && y < H )
+                    {
+                        bim.setRGB( x, y, whiteInt );
+                        if ( bim.getRGB( x, y + 1 ) == lineColorInt
+                            || bim.getRGB( x, y + 2 ) == lineColorInt )
+                        {
+                            if ( bim.getRGB( x - 2, y ) == lineColorInt
+                                || bim.getRGB( x - 2, y + 1 ) == lineColorInt )
+                            {
+                                snowFlakes[i].x = x + 2;
+                                snowFlakes[i].y = y - 1;
+                            }
+                            else
+                            {
+                                snowFlakes[i].x = x - 2;
+                                snowFlakes[i].y = y - 1;
+                            }
+
+                            arttir = 0;
+                        }
+
+                    }
+                    if ( arttir == 1 )
+                    {
+                        snowFlakes[i].y++;
+                        snowFlakes[i].x = x
+                            + (int)( ( rand.nextGaussian() % 1.5 ) );
+                    }
+                    if ( snowFlakes[i].x > W || snowFlakes[i].x < 0 )
+                        snowFlakes[i].x = (int)W / 2;
+                    if ( snowFlakes[i].y > H - 5 )
+                    {
+                        snowFlakes[i].y = 0;
+                    }
+
+                }
+                bimg.drawString( "Applet by mhSatman();", W - 130, H - 10 );
+                repaint();
+                Thread.sleep( 0, 1 );
+                th.yield();
+            }
+            catch ( Exception e )
+            {
+            }
+        }
+    }
+
+
+    public void start()
+    {
+        th = new Thread( this );
+        th.start();
+    }
+
+}

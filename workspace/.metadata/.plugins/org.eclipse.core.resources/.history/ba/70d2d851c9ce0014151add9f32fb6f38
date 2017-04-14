@@ -1,0 +1,84 @@
+import java.awt.*;
+
+import javax.swing.*;
+
+
+/**
+ * Create fractal triangle thing.
+ * 
+ * @author Bryan Wu
+ * @version 3/18/15
+ * @author Period: 7
+ * @author Assignment: Ch74 Exercise 3 - NestedTriangles
+ * @author Sources: none
+ */
+class Sierpinski extends JPanel
+{
+    private Graphics graph;
+
+
+    public Sierpinski()
+    {
+        setBackground( Color.white );
+    }
+
+
+    private void drawTriangle( int centerX, int centerY, int side )
+    {
+        if ( side < 2 )// base case for when side less than 2
+        {
+            graph.drawLine( centerX,
+                centerY - side / 2,
+                centerX + side / 2,
+                centerY + side / 2 );
+            graph.drawLine( centerX,
+                centerY - side / 2,
+                centerX - side / 2,
+                centerY + side / 2 );
+            graph.drawLine( centerX + side / 2, centerY + side / 2, centerX
+                - side / 2, centerY + side / 2 );
+            return;
+        }
+        drawTriangle( centerX, centerY - side / 4, side / 2 );
+        drawTriangle( centerX - side / 4, centerY + side / 4, side / 2 );// triangles
+                                                                         // all
+                                                                         // around!
+        drawTriangle( centerX + side / 4, centerY + side / 4, side / 2 );
+    }
+
+
+    public void paintComponent( Graphics gr )
+    {
+        super.paintComponent( gr );
+        graph = gr;
+        setBackground( Color.white );
+        gr.setColor( Color.blue );
+
+        int width = getSize().width;
+        int height = getSize().height;
+        int smallSide;
+        if ( height < width )
+        {
+            smallSide = height;
+        }
+        else
+        {
+            smallSide = width;
+        }
+        drawTriangle( width / 2, height / 2, smallSide - 10 );
+    }
+}
+
+
+public class NestedTriangles extends JApplet
+{
+    public void init()
+    {
+        // This simple init() method just creates a drawing surface
+        // belonging to the nested class Display and uses it for
+        // the content pane of the applet. (This is one case where
+        // it is rather silly to use a JApplet rather than a plain
+        // old Applet!)
+        setContentPane( new Sierpinski() );
+    }
+}

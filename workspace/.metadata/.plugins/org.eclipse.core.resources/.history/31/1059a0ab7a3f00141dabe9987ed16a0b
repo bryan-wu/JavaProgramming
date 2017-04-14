@@ -1,0 +1,19 @@
+import kareltherobot.*;
+
+// TODO: add comments
+
+public class SorterBotTester implements Directions
+{
+    public static void main( String args[] )
+    {
+        // TODO: complete test method
+    }
+
+    static
+    {
+        World.reset();
+        World.readWorld( "ch6_25.wld" );
+        World.setDelay( 10 );
+        World.setVisible( true );
+    }
+}

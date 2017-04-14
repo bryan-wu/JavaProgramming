@@ -1,0 +1,88 @@
+import kareltherobot.*;
+
+
+/**
+ * Object class for SorterBot.
+ *
+ * @author Bryan Wu
+ * @version Sep 18, 2014
+ * @author Period: 7
+ * @author Assignment: ch6_25SorterBot
+ *
+ * @author Sources: none
+ */
+public class SorterBot extends SmartBot
+{
+    /**
+     * Default SmartBot constructor.
+     * 
+     * @param st
+     *            initial street
+     * @param av
+     *            initial avenue
+     * @param dir
+     *            direction this robot is facing
+     * @param numBeepers
+     *            number of beepers this robot has in its beeper bag
+     */
+    public SorterBot( int st, int av, Direction dir, int numBeepers )
+    {
+        super( st, av, dir, numBeepers );
+    }
+
+
+    /**
+     * Sort columns for lowest to highest.
+     */
+    public void sortThemAll()
+    {
+        goToEndOfRow();
+        clearRow();
+        goToOrigin();
+    }
+
+    public void goToOrigin()
+    {
+        while (frontIsClear())
+        {
+            move();
+        }
+        faceSouth();
+        while (frontIsClear())
+        {
+            move();
+        }
+        faceEast();
+    }
+    public void clearRow()
+    {
+        while (nextToABeeper())
+        {
+            pickBeeper();
+            move();
+        }
+    }
+    
+    
+    
+    /**
+     * Move to the end of the row.
+     */
+    public void goToEndOfRow()
+    {
+        while (nextToABeeper())
+        {
+            move();
+        }
+        turnAround();
+        move();
+        turnRight();
+        move();
+    }
+    
+    public void moveToNextUnfinishedRow()
+    {
+        move();
+        turnLeft();
+    }
+}

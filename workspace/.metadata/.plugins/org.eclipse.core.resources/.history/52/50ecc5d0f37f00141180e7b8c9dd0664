@@ -1,0 +1,20 @@
+import java.awt.*;
+
+
+/**
+ * This applet draws a red-and-black checkerboard. It is assumed that the size
+ * of the applet is 160 by 160 pixels.
+ * 
+ * @author Bryan Wu
+ * @version 12/9/14
+ * @author Period - 7
+ * @author Assignment - Ch41_forGraphics
+ * @author Sources - none
+ */
+public class Checkerboard extends AnimationBase
+{
+    public void drawFrame( Graphics g )
+    {
+        // TODO complete method
+    }
+}

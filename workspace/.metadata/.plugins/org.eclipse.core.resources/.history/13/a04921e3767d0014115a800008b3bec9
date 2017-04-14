@@ -1,0 +1,37 @@
+import javax.swing.*;
+import java.awt.*;
+
+/**
+ * Bouncing Balls
+ * 
+ * @author Bryan Wu
+ * @version 12/5/14
+ * 
+ * @author Period - 7
+ * @author Assignment - Ch38BEx1_MarchingLines1
+ * 
+ * @author Sources - none
+ */
+public class Ch38BEx3_BouncingBalls extends AnimationBase
+{
+    /**
+     * This routine is called by the system when the applet is first
+     * created.
+     */
+    public void init()
+    {
+        // add initialization code if necessary
+    }
+
+    /**
+     * This routine is called by the animation framework every time a
+     * new frame needs to be drawn.
+     * 
+     * For this animation, TODO complete comment
+     */
+    public void drawFrame( Graphics g )
+    {
+        super.drawFrame( g ); // remove this line
+        // TODO complete method
+    }
+}

@@ -1,0 +1,126 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.util.Random;
+
+
+/**
+ * Makes a blizzard of snowflakes.
+ * 
+ * @author Bryan Wu
+ * @version 3/18/15
+ * @author Period: 7
+ * @author Assignment: Ch74 Exercise 2 - Blizzard
+ * @author Sources: none
+ */
+class BlizzardPanel extends JPanel implements MouseListener
+{
+    private Graphics graph;
+
+    private Random rand;
+
+
+    /**
+     * Set-up background
+     */
+    public BlizzardPanel()
+    {
+        rand = new Random();
+        setBackground( Color.white );
+        addMouseListener( this );
+    }
+
+
+    /**
+     * Method to generate snowflake base.
+     * 
+     * @param x
+     *            x coordinate
+     * @param y
+     *            y coordinate
+     * @param size
+     *            size
+     */
+    private void drawStar( int x, int y, int size )
+    {
+        int endX;
+        int endY;
+
+        if ( size <= 2 )
+            return;
+
+        // Six lines radiating from (x,y)
+        for ( int i = 0; i < 6; i++ )
+        {
+            endX = (int)( x + ( size * Math.cos( ( 2 * Math.PI / 6 ) * i ) ) );
+            endY = (int)( y - ( size * Math.sin( ( 2 * Math.PI / 6 ) * i ) ) );
+
+            graph.drawLine( (int)x, (int)y, (int)endX, (int)endY );
+            drawStar( endX, endY, size / 6 );
+        }
+    }
+
+
+    public void paintComponent( Graphics gr )
+    {
+        super.paintComponent( gr );
+        graph = gr;
+
+        int width = getSize().width;
+        int height = getSize().height;
+        // setBackground( Color.white );
+        gr.setColor( Color.blue );
+        gr.drawRect( 0, 0, width - 1, height - 1 );
+
+        for ( int i = 0; i < 36; i++ )
+        {
+            Color randomColor = new Color( rand.nextFloat(),
+                rand.nextFloat(),
+                rand.nextFloat() );
+            gr.setColor( randomColor );
+            int size = rand.nextInt( 24 ) + 1;
+            drawStar( rand.nextInt( width ), rand.nextInt( height ), size );
+        }
+    }
+
+
+    public void mousePressed( MouseEvent evt )
+    {
+        repaint();
+    }
+
+
+    // Empty methods, required by the interface.
+    public void mouseReleased( MouseEvent evt )
+    {
+    }
+
+
+    public void mouseClicked( MouseEvent evt )
+    {
+    }
+
+
+    public void mouseEntered( MouseEvent evt )
+    {
+    }
+
+
+    public void mouseExited( MouseEvent evt )
+    {
+    }
+}
+
+
+public class Blizzard extends JApplet
+{
+    // This simple init() method just creates a drawing surface
+    // belonging to the nested class Display and uses it for
+    // the content pane of the JApplet. (This is one case where
+    // it is rather silly to use a JApplet rather than a plain
+    // old Applet!)
+    public void init()
+    {
+        setContentPane( new BlizzardPanel() );
+    }
+}

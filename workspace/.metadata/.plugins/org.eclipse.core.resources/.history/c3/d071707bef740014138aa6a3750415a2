@@ -1,0 +1,72 @@
+import javax.swing.*;
+
+import java.awt.*;
+import java.awt.geom.*;
+
+
+/**
+ * TODO Write a one-sentence summary of your class here. TODO Follow it with
+ * additional details about its purpose, what abstraction it represents, and how
+ * to use it.
+ * 
+ * @author TODO your name
+ * @version TODO date
+ * @author Period - TODO Your Period
+ * @author Assignment - Ch37_AppletEx
+ * @author Sources - TODO list collaborators
+ */
+public class ConcentricCircles extends JApplet
+{
+    /**
+     * The applet's init() method creates the display panel and adds them to the
+     * applet.
+     */
+    public void init()
+    {
+        Display displayPanel = new Display();
+
+        JPanel content = new JPanel();
+        content.setLayout( new BorderLayout() );
+        content.add( displayPanel, BorderLayout.CENTER );
+        setContentPane( content );
+    }
+
+
+    // Defines the display panel.
+    public class Display extends JPanel
+    {
+        public void paintComponent( Graphics gr )
+        {
+            super.paintComponent( gr );
+
+            Container applet = getContentPane();
+            int width = applet.getWidth();
+            int height = applet.getHeight();
+            setBackground( Color.WHITE );
+
+            gr.setColor( Color.BLUE );
+            gr.drawRect( 0, 0, width - 1, height - 1 );
+            String str = "";
+
+            Font curFont = applet.getFont();
+            FontMetrics curFontMetrics = applet.getFontMetrics( curFont );
+            Rectangle2D r2d = curFontMetrics.getStringBounds( str, gr );
+
+            int strWidth = (int)( (Rectangle2D.Float)r2d ).width;
+            int strHeight = (int)( (Rectangle2D.Float)r2d ).height;
+            gr.setColor( Color.BLACK );
+            gr.drawString( str,
+                ( width - strWidth ) / 2,
+                ( height + strHeight ) / 2 );
+
+            int radius = 20;
+            int count = 0;
+
+            while ( count < 10 )
+                gr.drawOval( ( width / 2 - radius1 ),
+                    ( height / 2 - radius1 ),
+                    radius1 * 2,
+                    radius1 * 2 );
+        }
+    }
+}

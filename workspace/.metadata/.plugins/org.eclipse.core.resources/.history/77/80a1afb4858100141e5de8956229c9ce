@@ -1,0 +1,32 @@
+import java.awt.*;
+
+/**
+   Graphs the sine function in red and the cosine function in blue,
+   both in the same drawing area. Draws the x and y axis. Also, draws
+   "tick" marks along the x axis at PI/4, PI/2, 3*PI/4, and 2*PI.
+   Draw axes and tick marks in black.
+   
+   The drawing area is 600 by 400. (X=0, Y=0) is the top left corner.
+
+   @author  TODO your name
+   @version TODO date
+
+   @author  Period - TODO Your Period
+   @author  Assignment - Ex3_SineCosineWave
+
+   @author  Sources - TODO list collaborators
+ */
+public class Ex3_SineCosineWave extends AnimationBase
+{
+    public void init()
+    {
+        setBackground( Color.WHITE );
+        
+        // add additional initialization code if necessary
+    }
+
+    public void drawFrame( Graphics gr )
+    {
+        // TODO complete method
+    }
+}

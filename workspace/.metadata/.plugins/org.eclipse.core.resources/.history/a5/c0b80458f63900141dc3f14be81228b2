@@ -1,0 +1,18 @@
+import kareltherobot.*;
+
+// TODO: add comments
+
+public class MazeWalker extends SmartBot
+{
+    // TODO: complete constructor
+
+    /**
+     * precondition: there is a wall directly to the right of this robot
+     * postcondition: moves along the wall one step keeping its position so
+     *                that the wall remains on its right
+     */
+    public void followWallRight()
+    {
+        // TODO: complete method
+    }
+}              

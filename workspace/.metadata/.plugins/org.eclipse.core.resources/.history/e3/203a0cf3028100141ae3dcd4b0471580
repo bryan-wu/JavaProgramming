@@ -1,0 +1,54 @@
+import java.awt.*;
+
+
+/**
+ * Applet shows a checkerboard pattern in which the even numbered rows slide to
+ * the left and the odd numbered rows slide to the right. It is ASSUMED that the
+ * applet is 160x160 pixels, since the individual squares in the board are 20
+ * pixels on a side.
+ * 
+ * @author TODO your name
+ * @version TODO date
+ * @author Period - TODO Your Period
+ * @author Assignment - Ch41_forGraphics
+ * @author Sources - TODO list collaborators
+ */
+public class SlidingCheckerboard extends AnimationBase
+{
+    public void drawFrame( Graphics g )
+    {
+        super.drawFrame( g );
+
+        int row, col;
+        int x, y;
+        y = 0;
+
+        for ( row = 0; row < 8; row++ )
+        {
+            x = 0;
+
+            for ( col = 0; col < 8; col++ )
+            {
+                if ( row % 2 == col % 2 )
+                {
+                    g.setColor( Color.red );
+                }
+                else
+                {
+                    g.setColor( Color.black );
+                }
+                g.fillRect( x, y, 20, 20 );
+                x = x + 20;
+            }
+            y = y + 20;
+        }
+        // for each row on the checkerboard:
+        // for each of the eight columns:
+        // Compute x,y for the top-left corner of the square
+        // if its a red square:
+        // g.setColor(Color.red)
+        // else
+        // g.setColor(Color.black)
+        // g.fillRect(x,y,20,20)
+    }
+}

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<settings settings_version="1.0">
+<sites>
+<site siteurl="http://205.173.41.10/javasnarf/snarf.xml"/>
+<site siteurl="http://205.173.41.10/apcssnarf/snarf.xml"/>
+</sites>
+<history>
+<install date="08.22.2014.02.18.57" location="D:\StudentStorage\bwu623\Dropbox\workspace\ch2_6MountainClimber" name="ch2_6MountainClimber" publisher="gkp" version="1.2"/>
+<install date="08.22.2014.02.19.10" location="D:\StudentStorage\bwu623\Dropbox\workspace\ch2_6MountainClimber" name="ch2_6MountainClimber" publisher="gkp" version="1.2"/>
+<install date="08.22.2014.02.48.56" location="D:\StudentStorage\bwu623\Dropbox\workspace\GridWorld_BugRunner" name="GridWorld_BugRunner" publisher="gkp" version="1.2"/>
+<install date="08.25.2014.02.32.45" location="D:\StudentStorage\bwu623\Dropbox\workspace\ch2_9Figure8" name="ch2_9Figure8" publisher="gkp" version="1.2"/>
+<install date="08.28.2014.02.30.41" location="D:\StudentStorage\bwu623\Dropbox\workspace\ch3_2PinSetter" name="ch3_2PinSetter" publisher="gkp" version="1.2"/>
+<install date="08.29.2014.02.14.37" location="D:\StudentStorage\bwu623\Dropbox\workspace\ch3_11Gardener" name="ch3_11Gardener" publisher="gkp" version="1.3"/>
+<install date="09.02.2014.02.28.52" location="D:\StudentStorage\bwu623\Dropbox\workspace\ch3_Olympics" name="ch3_Olympics" publisher="gkp" version="1.2"/>
+<install date="09.04.2014.02.18.32" location="D:\StudentStorage\bwu623\Dropbox\workspace\ch3_8Carpeter" name="ch3_8Carpeter" publisher="gkp" version="1.2"/>
+<install date="09.04.2014.02.55.53" location="D:\StudentStorage\bwu623\Dropbox\workspace\JMCh02_Hello" name="JMCh02_Hello" publisher="gkp" version="1.0"/>
+<install date="09.11.2014.01.45.58" location="D:\StudentStorage\bwu623\Dropbox\workspace\ch5_9MazeWalker" name="ch5_9MazeWalker" publisher="gkp" version="1.2"/>
+<install date="09.11.2014.02.14.41" location="D:\StudentStorage\bwu623\Dropbox\workspace\ch5_11RoomCarpeter" name="ch5_11RoomCarpeter" publisher="gkp" version="1.3"/>
+<install date="09.15.2014.02.40.37" location="D:\StudentStorage\bwu623\Dropbox\workspace\ch6_17EscapeBot" name="ch6_17EscapeBot" publisher="gkp" version="1.2"/>
+<install date="09.18.2014.02.20.53" location="D:\StudentStorage\bwu623\Dropbox\workspace\ch6_25SorterBot" name="ch6_25SorterBot" publisher="gkp" version="1.2"/>
+<install date="09.23.2014.02.46.44" location="D:\StudentStorage\bwu623\Dropbox\workspace\ch7_1_3RecursionWorld" name="ch7_1_3RecursionWorld" publisher="gkp" version="1.2"/>
+<install date="09.23.2014.02.48.41" location="D:\StudentStorage\bwu623\Dropbox\workspace\ch7_LostBeeperMine" name="ch7_LostBeeperMine" publisher="gkp" version="1.1"/>
+<install date="10.01.2014.05.03.54" location="C:\Users\home4fun\Dropbox\workspace\ch08_PrimitiveDataTypes" name="ch08_PrimitiveDataTypes" publisher="gkp" version="1.1"/>
+<install date="10.02.2014.02.13.34" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch09a_VarAssign" name="Ch09a_VarAssign" publisher="gkp" version="1.2"/>
+<install date="10.03.2014.02.36.00" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch09b_ExpArithOps" name="Ch09b_ExpArithOps" publisher="gkp" version="1.2"/>
+<install date="10.07.2014.02.31.25" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch09c_ObjectData" name="Ch09c_ObjectData" publisher="gkp" version="1.0"/>
+<install date="10.09.2014.02.19.26" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch10_IO" name="Ch10_IO" publisher="gkp" version="1.3"/>
+<install date="10.13.2014.02.27.54" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch11_FloatingPoint" name="Ch11_FloatingPoint" publisher="gkp" version="1.2"/>
+<install date="10.14.2014.02.44.20" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch12_DecisionMaking" name="Ch12_DecisionMaking" publisher="gkp" version="1.2"/>
+<install date="10.14.2014.02.44.50" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch12_DecisionMaking" name="Ch12_DecisionMaking" publisher="gkp" version="1.2"/>
+<install date="10.16.2014.02.13.18" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch13_If" name="Ch13_If" publisher="gkp" version="1.1"/>
+<install date="10.21.2014.02.27.54" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch14_BooleanExp" name="Ch14_BooleanExp" publisher="gkp" version="1.1"/>
+<install date="10.23.2014.01.56.42" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch15_Loops" name="Ch15_Loops" publisher="gkp" version="1.1"/>
+<install date="10.23.2014.01.56.55" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch15_Loops" name="Ch15_Loops" publisher="gkp" version="1.1"/>
+<install date="10.23.2014.01.57.18" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch15_Loops" name="Ch15_Loops" publisher="gkp" version="1.1"/>
+<install date="10.23.2014.01.57.47" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch15_Loops" name="Ch15_Loops" publisher="gkp" version="1.1"/>
+<install date="10.23.2014.02.17.38" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch16_MoreLoops" name="Ch16_MoreLoops" publisher="gkp" version="1.2"/>
+<install date="10.28.2014.02.35.44" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch17_NestingLoops" name="Ch17_NestingLoops" publisher="gkp" version="1.3"/>
+<install date="10.31.2014.02.25.18" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch18_SentinelLoops" name="Ch18_SentinelLoops" publisher="gkp" version="1.1"/>
+<install date="11.04.2014.02.34.44" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch19_ResultLoops" name="Ch19_ResultLoops" publisher="gkp" version="1.1"/>
+<install date="11.04.2014.02.34.59" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch19_ResultLoops" name="Ch19_ResultLoops" publisher="gkp" version="1.1"/>
+<install date="11.10.2014.12.01.46" location="C:\Users\Bryan\Dropbox\workspace\Ch20_RandomClass" name="Ch20_RandomClass" publisher="gkp" version="1.1"/>
+<install date="11.15.2014.11.29.44" location="C:\Users\Bryan\Dropbox\workspace\ch4_1RandomWalker" name="ch4_1RandomWalker" publisher="gkp" version="1.3"/>
+<install date="11.15.2014.11.29.51" location="C:\Users\Bryan\Dropbox\workspace\Ch23_ScannerPrintStream" name="Ch23_ScannerPrintStream" publisher="gkp" version="1.2"/>
+<install date="11.20.2014.01.49.58" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch24_FileInput" name="Ch24_FileInput" publisher="gkp" version="1.2"/>
+<install date="11.24.2014.02.38.51" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch36_Applets" name="Ch36_Applets" publisher="gkp" version="1.3"/>
+<install date="11.25.2014.01.49.41" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch37_AppletEx" name="Ch37_AppletEx" publisher="gkp" version="1.2"/>
+<install date="12.01.2014.02.27.59" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch38_MoreAppletEx" name="Ch38_MoreAppletEx" publisher="gkp" version="1.2"/>
+<install date="12.04.2014.02.06.53" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch38B_Animation" name="Ch38B_Animation" publisher="gkp" version="1.4"/>
+<install date="12.04.2014.02.07.05" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch38B_LessonEx" name="Ch38B_LessonEx" publisher="gkp" version="1.3"/>
+<install date="12.04.2014.02.07.39" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch38B_LessonEx" name="Ch38B_LessonEx" publisher="gkp" version="1.3"/>
+<install date="12.06.2014.10.35.19" location="C:\Users\Bryan\Dropbox\workspace\Ch38B_Animation" name="Ch38B_Animation" publisher="gkp" version="1.4"/>
+<install date="12.09.2014.02.29.30" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch41_forGraphics" name="Ch41_forGraphics" publisher="gkp" version="1.1"/>
+<install date="12.11.2014.02.13.10" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch42_Morefor" name="Ch42_Morefor" publisher="gkp" version="1.3"/>
+<install date="01.08.2015.01.54.43" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch46_Arrays" name="Ch46_Arrays" publisher="gkp" version="1.0"/>
+<install date="01.08.2015.02.12.09" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch47_ArrayAlgorithms" name="Ch47_ArrayAlgorithms" publisher="gkp" version="2.0"/>
+<install date="01.15.2015.02.46.58" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch48_ArraysAsParameters" name="Ch48_ArraysAsParameters" publisher="gkp" version="1.2"/>
+<install date="01.16.2015.02.44.50" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch49B_ArraysOfObj" name="Ch49B_ArraysOfObj" publisher="gkp" version="1.3"/>
+<install date="01.26.2015.02.05.49" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch54_ArrayList" name="Ch54_ArrayList" publisher="gkp" version="1.2"/>
+<install date="01.29.2015.01.48.32" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch49C_2DArrays" name="Ch49C_2DArrays" publisher="gkp" version="1.1"/>
+<install date="02.03.2015.02.44.05" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch49D_StringBuffer" name="Ch49D_StringBuffer" publisher="gkp" version="1.3"/>
+<install date="02.09.2015.02.07.26" location="D:\StudentStorage\bwu623\Dropbox\workspace\Mozart Waltz Generator" name="Mozart Waltz Generator" publisher="gkp" version="1.1"/>
+<install date="02.09.2015.02.14.05" location="D:\StudentStorage\bwu623\Dropbox\workspace\Mozart Waltz Generator" name="Mozart Waltz Generator" publisher="gkp" version="1.1"/>
+<install date="02.12.2015.02.49.43" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch50_Inheritance" name="Ch50_Inheritance" publisher="gkp" version="1.0"/>
+<install date="02.23.2015.02.06.47" location="D:\StudentStorage\bwu623\Dropbox\workspace\ch4_2RacerRobot" name="ch4_2RacerRobot" publisher="gkp" version="1.3"/>
+<install date="02.23.2015.02.07.09" location="D:\StudentStorage\bwu623\Dropbox\workspace\ch4_2RacerRobot" name="ch4_2RacerRobot" publisher="gkp" version="1.3"/>
+<install date="02.26.2015.01.48.38" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch53B_ComparableInterface" name="Ch53B_ComparableInterface" publisher="gkp" version="1.0"/>
+<install date="03.02.2015.02.34.40" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch71_Recursion" name="Ch71_Recursion" publisher="gkp" version="1.0"/>
+<install date="03.02.2015.02.35.57" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch71_Recursion" name="Ch71_Recursion" publisher="gkp" version="1.0"/>
+<install date="03.02.2015.02.36.02" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch72_RecursionEx" name="Ch72_RecursionEx" publisher="gkp" version="1.2"/>
+<install date="03.06.2015.02.28.50" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch73_MoreRecursion" name="Ch73_MoreRecursion" publisher="gkp" version="1.2"/>
+<install date="03.18.2015.02.49.50" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch74_RecursionGraphics" name="Ch74_RecursionGraphics" publisher="gkp" version="1.0"/>
+<install date="03.19.2015.02.40.59" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch74_FractalTree" name="Ch74_FractalTree" publisher="gkp" version="1.1"/>
+<install date="03.20.2015.02.28.40" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch56_SwingFrames" name="Ch56_SwingFrames" publisher="gkp" version="1.1"/>
+<install date="03.20.2015.02.40.57" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch57_ButtonsAndActions" name="Ch57_ButtonsAndActions" publisher="gkp" version="1.1"/>
+<install date="03.23.2015.02.07.00" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch59_ButtonsAndActionEvents" name="Ch59_ButtonsAndActionEvents" publisher="gkp" version="1.1"/>
+<install date="03.26.2015.02.23.05" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch60_TextFieldsAndLabels" name="Ch60_TextFieldsAndLabels" publisher="gkp" version="1.2"/>
+<install date="03.27.2015.02.33.07" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch61_GUIApps" name="Ch61_GUIApps" publisher="gkp" version="1.1"/>
+<install date="04.03.2015.02.36.39" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch63_RadioButtons" name="Ch63_RadioButtons" publisher="gkp" version="1.1"/>
+<install date="04.09.2015.01.52.03" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch64_Sliders" name="Ch64_Sliders" publisher="gkp" version="1.1"/>
+<install date="04.09.2015.02.18.11" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch65_Events" name="Ch65_Events" publisher="gkp" version="1.1"/>
+<install date="04.12.2015.11.27.44" location="C:\Users\Bryan\Dropbox\workspace\Ch80_Exceptions" name="Ch80_Exceptions" publisher="gkp" version="1.1"/>
+<install date="04.12.2015.01.19.49" location="C:\Users\Bryan\Dropbox\workspace\Ch80_Exceptions" name="Ch80_Exceptions" publisher="gkp" version="1.1"/>
+<install date="04.20.2015.02.27.43" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch80_Exceptions" name="Ch80_Exceptions" publisher="gkp" version="1.1"/>
+<install date="04.24.2015.02.46.28" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch81_MoreExceptions" name="Ch81_MoreExceptions" publisher="gkp" version="1.1"/>
+<install date="04.27.2015.02.10.07" location="D:\StudentStorage\bwu623\Dropbox\workspace\Ch83_WritingTextFiles" name="Ch83_WritingTextFiles" publisher="gkp" version="1.0"/>
+</history>
+</settings>

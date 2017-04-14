@@ -1,0 +1,233 @@
+import java.util.*;
+
+
+/**
+ * Chapter 19 - Result-controlled Loops Exercises 1-4.
+ * 
+ * @author Bryan Wu
+ * @version 11/4/14
+ * 
+ * @author Period - 7
+ * @author Assignment - Ch19Ex1to4
+ * 
+ * @author Sources - none
+ */
+public class Ch19Ex1to4
+{
+    /**
+     * scan
+     */
+    Scanner scan;
+
+
+    /**
+     * Constructs a Scanner for input from the console.
+     */
+    public Ch19Ex1to4()
+    {
+        scan = new Scanner( System.in );
+    }
+
+
+    /**
+     * Constructs a Scanner to evaluate passed input (used for testing).
+     * 
+     * @param str
+     *            input for the various methods
+     */
+    public Ch19Ex1to4( String str )
+    {
+        scan = new Scanner( str );
+    }
+
+
+    /**
+     * credit card bill
+     */
+    public void creditCardBill()
+    {
+        System.out.println( "Enter the beginning balance: " );
+        double balance = scan.nextDouble();
+        System.out.println( "Enter the monthly interest: " );
+        double monthlyInterest = scan.nextDouble();
+        System.out.println( "Enter the monthly payment: " );
+        double monthlyPayment = scan.nextDouble();
+        int month = 0;
+        double totalPayments = 0;
+
+        while ( balance > 0 )
+        {
+            month++;
+            balance = balance + ( balance * monthlyInterest ) - monthlyPayment;
+            totalPayments = totalPayments + monthlyPayment;
+            System.out.println( "Month: " + month + "\tbalance: " + balance
+                + "\ttotal payments: " + totalPayments );
+        }
+        System.out.println( "Final Payment to bring balance to exactly zero: $"
+            + Math.abs( balance ) );
+        // Have the program prompt for the beginning balance,
+        // the monthly interest, and the payment amount. Also, when the
+        // balance falls below the amount of the monthly payment,
+        // write out the final payment that will bring
+        // the balance to exactly zero.
+    }
+
+
+    /**
+     * drug potency
+     */
+    public void drugPotency()
+    {
+        final double effectivenessLoss = 0.96;
+        int month = 0;
+        double effectiveness = 100.0;
+
+        while ( effectiveness > 50.0 )
+        {
+            System.out.println( "Month: " + month + "\tEffectiveness: "
+                + effectiveness );
+            month++;
+            effectiveness = effectiveness * effectivenessLoss;
+        }
+        System.out.print( "Month: " + month + "\tEffectiveness: "
+            + effectiveness );
+        System.out.print( " DISCARDED" );
+    }
+
+
+    /**
+     * e to power of x
+     */
+    public void eToX()
+    {
+        System.out.println( "Enter x: " );
+        int x = scan.nextInt();
+
+        double n = 1;
+        double term = x / n;
+        double sum = ( 1.0 + term );
+        while ( term > 1.0E-12 )
+        {
+            // So each iteration of the loop merely has to
+            // multiply the previous term by x/N and add it to the accumulating
+            // sum.
+            System.out.println( "n: " + n + "\tterm: " + term + "\tsum: " + sum );
+            n++;
+            term = term * ( x / n );
+            sum = sum + term;
+        }
+        System.out.println( "n: " + n + "\tterm: " + term + "\tsum: " + sum );
+        System.out.println( "" );
+        System.out.println( "my e^x: " + sum );
+        double realEToX = Math.exp( x );
+        System.out.println( "real e^x: " + realEToX );
+    }
+
+
+    /**
+     * newtons lover newtons lover newtons lover
+     */
+    public void newtons1overX()
+    {
+        System.out.println( "Enter A: " );
+        double a = scan.nextDouble();
+        System.out.println( "Enter B: " );
+        double b = scan.nextDouble();
+        double x = 0;
+        double reciprocal = 0;
+
+        if ( a > 0 && b < 0 )
+        {
+            a = -a;
+            b = -b;
+        }
+        
+        if ( a < 0 && b < 0 )
+        {
+            a = -a;
+            b = -b;
+        }
+
+        if ( b == 0 )
+        {
+            return;
+        }
+        
+        while ( Math.abs( reciprocal ) < Math.abs( Math.pow( b, -1 ) ) )
+        {
+
+            x = x + 0.01;
+
+            reciprocal = x * ( 2 - x * b );
+            System.out.println( "Estimation of 1/b: " + reciprocal );
+
+        }
+        double quotient = a * reciprocal;
+        System.out.println( "A/B is: " + quotient );
+    }
+
+
+    /**
+     * Testing method: instantiates a Lesson15Exercises object and then invokes
+     * each method.
+     * 
+     * @param args
+     *            command line parameters (not used)
+     */
+    public static void main( String[] args )
+    {
+        Scanner kbd = new Scanner( System.in );
+        boolean done = false;
+
+        Ch19Ex1to4 exercise = new Ch19Ex1to4();
+
+        do
+        {
+            System.out.println();
+            System.out.println();
+            System.out.println( "Make a selection" );
+            System.out.println();
+            System.out.println( "   (1) Credit Card Bill" );
+            System.out.println( "   (2) Drug Potency" );
+            System.out.println( "   (3) e^x" );
+            System.out.println( "   (4) 1/X by Newton's Method" );
+            System.out.println( "   (Q) Quit" );
+            System.out.println();
+            System.out.print( "Enter a choice:  " );
+            String response = kbd.nextLine();
+
+            if ( response.length() > 0 )
+            {
+                System.out.println();
+
+                switch ( response.charAt( 0 ) )
+                {
+                    case '1':
+                        exercise.creditCardBill();
+                        break;
+                    case '2':
+                        exercise.drugPotency();
+                        break;
+                    case '3':
+                        exercise.eToX();
+                        break;
+                    case '4':
+                        exercise.newtons1overX();
+                        break;
+                    default:
+                        if ( response.toLowerCase().charAt( 0 ) == 'q' )
+                        {
+                            done = true;
+                        }
+                        else
+                        {
+                            System.out.print( "Invalid Choice" );
+                        }
+                        break;
+                }
+            }
+        } while ( !done );
+
+        System.out.println( "Goodbye!" );
+    }
+}

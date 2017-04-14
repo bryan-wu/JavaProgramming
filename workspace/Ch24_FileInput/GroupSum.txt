@@ -1,0 +1,5 @@
+Sum of group 1 is 6
+Group 2 contains no data
+Sum of group 3 is 9
+Sum of group 4 is 70
+Group 5 contains no data

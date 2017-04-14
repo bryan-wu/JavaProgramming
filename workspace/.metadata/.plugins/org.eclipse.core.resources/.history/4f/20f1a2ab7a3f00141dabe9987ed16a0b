@@ -1,0 +1,18 @@
+import kareltherobot.*;
+
+// TODO: add comments
+
+public class SorterBot extends SmartBot
+{
+    public SorterBot( int st, int av, Direction dir, int numBeepers )
+    {
+        super( st, av, dir, numBeepers );
+    }
+
+    public void sortThemAll()
+    {
+        // TODO: complete method
+    }
+
+    // TODO: complete methods
+}              
